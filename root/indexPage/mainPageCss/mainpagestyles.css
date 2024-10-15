@@ -71,52 +71,74 @@ html {
 
 }
 
-.mainContainer {
-
-    /* border: 0.1em solid red; */
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-
-}
-
 /* HEADER CONTAINER STYLES */
 
 .headerContainer {
-
+    
+    justify-content: center;
     background-color: #fff;
-    border-bottom:  0.09em solid gray;
     display: inline-flex;
     width: 100vw;
     height: 14vh;
-    z-index: 1;
+    /* border: 5px solid purple; */    
 
 }
+
+
 
 .menuBoxes, .logoBox {
     
     font-size: 1em;
-    line-height: 1.5;
-    border: 0.01em solid transparent;
-    justify-content: center;
-    align-items:end;
+    align-items: end;
+    cursor: pointer;  
+
+}
+
+a {
+    
+    text-decoration: none;
+    color: #000;
+
+}
+
+nav {
+
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+    display: inline-block;
+    border-bottom:  0.09em solid gray;   
+    width: 100vw;
 
 }
 
 .menuBoxes {
     
+    margin-top: 1em;
+    margin-left: 0.5em;
     height: 10vh;
     width: 14vw;
+    justify-content: center;
+    /* border: 1px solid blue; */
 
 }
 
 .logoBox {
   
-    height: 10vh;
-    width: 34.5vw;
-    margin-left: 0.1em;
+    height: 12vh;
+    width: 31.5vw;
     align-items: center;
-    flex-grow: 5;
+    /* border: 1px solid green; */
+
+}
+
+.pageNameText {
+
+    color: #000;
+    font-weight: bold;
+    height: 5vh;
+    margin-bottom: 3em;
+    /* border: 1px solid red;   */
 
 }
 
@@ -124,16 +146,90 @@ html {
 
     width: 4em;
     height: 7vh;
-    padding: 2em;
+    padding: 1em;
+    cursor: default;
+    /* border: 1px solid red; */
+    
     
 }
 
+
+
+/* PRESENTATION CONTAINER */
+
 .presentationContainer {
 
-    /* border: 0.01em solid green; */
-    width: 99vw;
-    height: 50vh;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90vw;
+    height: 85vh;
+    /* border: 1px solid purple; */
 
 }
 
-/* PRESENTATION CONTAINER */
+.imgBox {
+
+    display: flex;
+    width: 89vw;
+    height: 59vh;
+    margin-top: 0.05em;
+    margin-left: 0.1em;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid green; */
+
+}
+
+#mainImg {
+
+    height: 50vh;
+    width: 63vh;
+    margin: 0 auto;
+    /* border: 1px solid yellowgreen; */
+
+}
+
+.titleBox {
+
+    display: block;
+    font-size: 1em;
+    width: 50vw;
+    height: 30vh;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    line-height: 1.5;   
+    /* border: 1px solid coral; */
+
+}
+
+/* END PRESENTATION CONTAINERS STYLES */
+
+/* OPTIONS CONTAINER */
+
+/* need to add @media here */
+
+.optionsContainer {
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 60vh;
+    width: 90vw;
+    margin: 0 auto;
+    /* border: 1px solid red;  */
+
+}
+
+/* need to add @media here */
+.optBox {
+    
+    height: 40vh;
+    width: 25vw;
+    margin: 0.5em;
+    padding: 1.6em .8em 2.13333em;
+    text-align: right;
+    border: 1px solid green;
+
+}
