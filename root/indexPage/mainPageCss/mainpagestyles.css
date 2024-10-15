@@ -66,6 +66,8 @@ a img {
 
 html {
 
+    scroll-behavior: smooth;
+    scrollbar-width:none;
     font-family: 'Helvetica Neue',sans-serif;
     color: #000;
 
@@ -107,7 +109,7 @@ nav {
     z-index: 1;
     background-color: #fff;
     display: inline-block;
-    border-bottom:  0.09em solid gray;   
+    border-bottom:  0.09em solid silver;   
     width: 100vw;
 
 }
@@ -199,6 +201,7 @@ nav {
     margin: 0 auto;
     align-content: center;
     text-align: center;
+    font-family: 'Helvetica Neue',sans-serif;
     line-height: 1.5;   
     /* border: 1px solid coral; */
 
@@ -225,11 +228,49 @@ nav {
 /* need to add @media here */
 .optBox {
     
-    height: 40vh;
+    line-height: 1.5;
+    height: 50vh;
     width: 25vw;
     margin: 0.5em;
-    padding: 1.6em .8em 2.13333em;
-    text-align: right;
-    border: 1px solid green;
+    padding: 0.1em .1em 2em;
+    align-items: center;
+    text-align: center;
+    font-family: 'Helvetica Neue',sans-serif;
+    background-color:rgba(192,192,192,0.53);
+    border: 1px solid silver;
+
+}
+
+.optBox h3 {
+
+    text-align: left;
+    padding-left: 0.5em;
+    font-size: 1.3rem;
+    line-height: 5;   
+
+}
+
+.optBox h4 {
+
+    font-size: 0.8rem;
+    line-height: 1;
+    text-align: left;
+    padding-left: 0.5em;
+}
+
+.optBox img {
+    
+    height: 23vh;
+    width: 25vw;
+    transition: width 1s;
+
+    /* border: 1px solid red; */
+
+}
+
+.optBox img:hover {
+
+width: 26vw;
+
 
 }
