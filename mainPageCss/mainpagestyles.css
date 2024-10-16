@@ -234,6 +234,7 @@ nav {
     margin: 0.5em;
     padding: 0.1em .1em 2em;
     align-items: center;
+    overflow: hidden;
     text-align: center;
     font-family: 'Helvetica Neue',sans-serif;
     background-color:rgba(192,192,192,0.53);
@@ -263,6 +264,7 @@ nav {
     height: 23vh;
     width: 25vw;
     transition: width 1s;
+    
 
     /* border: 1px solid red; */
 
@@ -271,6 +273,5 @@ nav {
 .optBox img:hover {
 
 width: 26vw;
-
 
 }
