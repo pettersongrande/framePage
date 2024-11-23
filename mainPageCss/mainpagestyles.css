@@ -73,26 +73,30 @@ html {
 
 }
 
-/* HEADER CONTAINER STYLES */
+/* NAV CONTAINER STYLES */
 
-.headerContainer {
+.navContainer {
     
-    justify-content: center;
+    
     background-color: #fff;
-    display: inline-flex;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 1;
     width: 100vw;
     height: 14vh;
-    /* border: 5px solid purple; */    
+    position: fixed;
+    z-index: 1;
+    /* border: 2px solid purple; */
 
 }
 
+.navStyles {
 
-
-.menuBoxes, .logoBox {
-    
+    font-family: 'Helvetica Neue',sans-serif;
+    cursor: pointer;
     font-size: 1em;
-    align-items: end;
-    cursor: pointer;  
+    margin-bottom: 1em;
+    border-bottom: 1px solid silver;
 
 }
 
@@ -103,69 +107,71 @@ a {
 
 }
 
-nav {
+a:hover {
 
-    position: fixed;
-    z-index: 1;
-    background-color: #fff;
-    display: inline-block;
-    border-bottom:  0.09em solid silver;   
-    width: 100vw;
+    color: black;
+    font-weight: bolder;
 
 }
 
 .menuBoxes {
-    
-    margin-top: 1em;
-    margin-left: 0.5em;
-    height: 10vh;
-    width: 14vw;
-    justify-content: center;
-    /* border: 1px solid blue; */
 
+    
+    align-content: flex-end;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    flex: 1;
+    /* border: 1px solid lightblue; */
+
+    
+/* styling inside the nav bar pages */
 }
 
 .logoBox {
   
-    height: 12vh;
-    width: 31.5vw;
-    align-items: center;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
     /* border: 1px solid green; */
 
 }
+
+.logoBox img {
+
+    width: 5vw;
+    margin-top: 1em;
+    margin-right: 0.5em;
+    /* border: 1px blue solid; */
+
+}
+
 
 .pageNameText {
 
     color: #000;
     font-weight: bold;
-    height: 5vh;
-    margin-bottom: 3em;
+    margin-top: 3.5em;
+    text-align: center;
     /* border: 1px solid red;   */
 
 }
 
-.headerContainer img {
+.pageNameText:hover {
 
-    width: 4em;
-    height: 7vh;
-    padding: 1em;
-    cursor: default;
-    /* border: 1px solid red; */
-    
-    
+    color: red;
+
 }
 
 
-
-/* PRESENTATION CONTAINER */
+/* PRESENTATION CONTAINER STYLES -------------------*/ 
 
 .presentationContainer {
 
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    width: 90vw;
-    height: 85vh;
+    width: 99vw;
+    height: 99vh;
     /* border: 1px solid purple; */
 
 }
@@ -178,15 +184,14 @@ nav {
     margin-top: 0.05em;
     margin-left: 0.1em;
     align-items: center;
-    justify-content: center;
     /* border: 1px solid green; */
 
 }
 
 #mainImg {
-
+    
     height: 50vh;
-    width: 63vh;
+    width: 70vh;
     margin: 0 auto;
     /* border: 1px solid yellowgreen; */
 
@@ -197,7 +202,7 @@ nav {
     display: block;
     font-size: 1em;
     width: 50vw;
-    height: 30vh;
+    height: 40vh;
     margin: 0 auto;
     align-content: center;
     text-align: center;
