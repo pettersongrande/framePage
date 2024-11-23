@@ -111,15 +111,20 @@ a:hover {
 
     color: black;
     font-weight: bolder;
+    border-bottom: 2px solid orangered;
+    padding-top: 2px;
+    
 
 }
+
+
 
 .menuBoxes {
 
     
     align-content: flex-end;
-    padding-left: 1em;
-    padding-bottom: 0.5em;
+    padding-left: 3em;
+    line-height: 1.5;
     flex: 1;
     /* border: 1px solid lightblue; */
 
@@ -152,6 +157,7 @@ a:hover {
     font-weight: bold;
     margin-top: 3.5em;
     text-align: center;
+    order: 1;
     /* border: 1px solid red;   */
 
 }
@@ -159,6 +165,7 @@ a:hover {
 .pageNameText:hover {
 
     color: red;
+    order:2
 
 }
 
