@@ -73,217 +73,269 @@ html {
 
 }
 
-/* NAV CONTAINER STYLES */
+/* MAIN CONTAINER  */
 
-.navContainer {
-    
-    
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
     background-color: #fff;
+    margin: 0 auto;
+    height: 100vh;
+    /* border: 1px solid green; */
+}
+
+/* NAV BAR CONTAINER STYLES */
+
+.navBar {
+/* NAV BAR CONTAINER PROPERTIES */
     display: flex;
     justify-content: space-around;
-    flex-basis: 1;
-    width: 100vw;
     height: 14vh;
-    position: fixed;
+    width: 100vw;
+    background-color: #fff;
+    border-bottom: 2px solid silver;
+    /* position: fixed; */
     z-index: 1;
-    /* border: 2px solid purple; */
 
 }
 
-.navStyles {
-
-    font-family: 'Helvetica Neue',sans-serif;
-    cursor: pointer;
+.navOptions {
+/* NAV BAR BOXES ITEM PROPERTIES*/
     font-size: 1em;
-    margin-bottom: 1em;
-    border-bottom: 1px solid silver;
-
-}
-
-a {
-    
-    text-decoration: none;
+    font-family: 'Helvetica Neue',sans-serif;
     color: #000;
+    padding: 0.5em;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+    flex-grow: 1;
+    height: 100%;    
 
 }
 
-a:hover {
+#navLinks {
+
+    align-content: flex-end;
+    line-height: 1.5;
+    flex-grow: 7;
+
+}
+
+#navLinks:hover, .box-6:hover {
 
     color: black;
     font-weight: bolder;
     border-bottom: 2px solid orangered;
     padding-top: 2px;
-    
+    cursor: pointer;    
 
 }
 
+.box-1 {
 
+    order: 1;
+}
+.box-2 {
 
-.menuBoxes {
-
+    order: 2;
     
+}
+.box-3 {
+
+    order: 3;
+    
+}
+.box-4 {
+
+    order: 4;
+    
+}
+.box-5 {
+
+    align-content: center;
+    order: 5;  
+
+}
+
+.box-6 {
+
+    font-size: 1.1em;
+    font-weight: bold;
     align-content: flex-end;
-    padding-left: 3em;
-    line-height: 1.5;
-    flex: 1;
-    /* border: 1px solid lightblue; */
-
+    line-height: 3;
+    order: 6;
     
-/* styling inside the nav bar pages */
 }
 
-.logoBox {
-  
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
-    /* border: 1px solid green; */
-
-}
-
-.logoBox img {
+.box-5 img {
 
     width: 5vw;
-    margin-top: 1em;
+    margin-top: 1.6em;
     margin-right: 0.5em;
-    /* border: 1px blue solid; */
 
 }
 
 
-.pageNameText {
+/* Welcome Container -------------------*/ 
 
+.welcomeContainer {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 86vh;
+    width: 100vw;
+    /* border: 2px red solid; */
+
+}
+
+.welcomeBox {
+
+    
+    font-size: 1em;
+    font-family: 'Helvetica Neue',sans-serif;
     color: #000;
-    font-weight: bold;
-    margin-top: 3.5em;
+    padding: 0.5em;
+    width: 50%;
+    flex-grow: 1;
+    /* border: 1px solid orange; */
+
+}
+
+.wb-1 {
+
     text-align: center;
     order: 1;
-    /* border: 1px solid red;   */
 
 }
 
-.pageNameText:hover {
-
-    color: red;
-    order:2
-
-}
-
-
-/* PRESENTATION CONTAINER STYLES -------------------*/ 
-
-.presentationContainer {
-
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 99vw;
-    height: 99vh;
-    /* border: 1px solid purple; */
-
-}
-
-.imgBox {
-
-    display: flex;
-    width: 89vw;
-    height: 59vh;
-    margin-top: 0.05em;
-    margin-left: 0.1em;
-    align-items: center;
-    /* border: 1px solid green; */
-
-}
-
-#mainImg {
+.wb-2 {
     
-    height: 50vh;
-    width: 70vh;
-    margin: 0 auto;
-    /* border: 1px solid yellowgreen; */
-
-}
-
-.titleBox {
-
-    display: block;
-    font-size: 1em;
-    width: 50vw;
-    height: 40vh;
-    margin: 0 auto;
+    flex-grow: 5;
+    font-size: 1.1em;
+    text-align: center;
     align-content: center;
-    text-align: center;
-    font-family: 'Helvetica Neue',sans-serif;
-    line-height: 1.5;   
-    /* border: 1px solid coral; */
+    line-height: 1.5;
+    order: 2;
 
 }
 
-/* END PRESENTATION CONTAINERS STYLES */
+.wb-1 img {
 
-/* OPTIONS CONTAINER */
+    width: 50vw;
+    margin-top: 1em;
+    margin-right: 0.5em;
 
-/* need to add @media here */
+}
 
-.optionsContainer {
+/* SERVICES CONTAINER --------------------- */
+
+.servicesContainer {
 
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 60vh;
-    width: 90vw;
-    margin: 0 auto;
-    /* border: 1px solid red;  */
-
-}
-
-/* need to add @media here */
-.optBox {
-    
-    line-height: 1.5;
-    height: 50vh;
-    width: 25vw;
-    margin: 0.5em;
-    padding: 0.1em .1em 2em;
+    justify-content: space-evenly;
     align-items: center;
-    overflow: hidden;
-    text-align: center;
-    font-family: 'Helvetica Neue',sans-serif;
-    background-color:rgba(192,192,192,0.53);
-    border: 1px solid silver;
-
-}
-
-.optBox h3 {
-
-    text-align: left;
-    padding-left: 0.5em;
-    font-size: 1.3rem;
-    line-height: 4;   
-
-}
-
-.optBox h4 {
-
-    font-size: 0.8rem;
-    line-height: 1;
-    text-align: left;
-    padding-left: 0.5em;
-}
-
-.optBox img {
-    
-    height: 23vh;
-    width: 25vw;
-    transition: width 1s;
-    
-
+    width: 100vw;
+    height: 75vh;
+    margin: 0 auto;
     /* border: 1px solid red; */
 
 }
 
-.optBox img:hover {
+.servicesBox {
 
-width: 26vw;
+   display: flex;
+   flex-direction: column;
+   line-height: 1.5;
+   height: 50vh;
+   width: 25vw;
+   margin: 0.5em;
+   padding: 0.1em .1em 2em;
+   text-align: center;
+   overflow: hidden;
+   font-family: 'Helvetica Neue',sans-serif;
+   background-color:rgba(192,192,192,0.53);
+   border: 1px solid silver;
+
+}
+
+.sbx-1 {
+
+    order: 1;
+
+}
+
+.sbx-2 {
+
+    order: 2;
+
+}
+
+.sbx-3 {
+    
+    order: 3;
+
+}
+
+
+.servicesBox div {
+
+    flex-grow: 1;
+    /* border: 1px solid black */
+
+}
+
+.servicesBox img {
+
+    height: 23vh;
+    width: 25vw;
+    transition: width 1s;
+
+}
+
+.servicesBox h3 {
+    
+    text-align: left;
+    padding-left: 0.5em;
+    font-size: 1.5rem;
+    line-height: 4;
+    
+
+}
+
+.servicesBox h4 {
+
+    font-size: 1rem;
+    line-height: 1;
+    text-align: left;
+    padding-left: 0.5em;
+
+}
+
+.servicesBox a {
+
+    padding-top: 3em;
+    color: #000;
+    text-decoration: none;
+    
+
+}
+
+.servicesBox a:hover {
+
+    color: black;
+    font-weight: bolder;
+    text-decoration-line: underline;
+    cursor: pointer;
+
+}
+
+.servicesBox img:hover {
+
+    width: 26vw;
 
 }
