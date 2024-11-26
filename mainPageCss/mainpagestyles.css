@@ -179,25 +179,26 @@ html {
 }
 
 
-/* NAV BAR MEDIA QUERIES */
+/* NAV BAR @MEDIA */
 
-@media (max-height: 700px){
+@media (max-height: 600px){
 
     .box-5 img {
 
-        width: 4vw;
-        padding-bottom: 1em;
-        
+        display: none;
     
     }
 
 }
 
-@media (max-height: 550px){
+@media (max-height: 600px){
 
+  
     .box-5 img {
 
-        display: none;        
+        width: 4vw;
+        margin: 0 auto;
+        padding-top: 1em ; 
     
     }
 
@@ -208,44 +209,7 @@ html {
 
 #navLinks {
 
-    align-content: flex-end;
-    line-height: 1.5;
-    flex-grow: 7;
     display: none;
-
-}
-
-#navLinks:hover, .box-6:hover {
-
-    color: black;
-    font-weight: bolder;
-    border-bottom: 2px solid orangered;
-    padding-top: 2px;
-    cursor: pointer;    
-
-}
-.box-5 {
-
-    align-content: center;
-    order: 6;  
-
-}
-
-.box-6 {
-
-    font-size: 2rem;
-    font-weight: bold;
-    align-content: flex-end;
-    line-height: 3;
-    order: 5;
-    
-}
-
-.box-5 img {
-
-    width: 15vw;
-    margin-top: 1.6em;
-    margin-right: 0.5em;
 
 }
 
@@ -305,15 +269,41 @@ html {
 
 }
 
-@media (max-height:700px){
+/* WELCOME CONTAINER @MEDIA */
+
+@media (max-height:500px){
 
     .welcomeContainer {
 
+        
         flex-wrap: nowrap;
+        /* border: 1px solid blue; */
 
     }
 
+    .welcomeBox {
 
+        font-size: 1em;
+        
+
+    }
+
+    .wb-1 img {
+
+        
+        width: 50vw;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        
+    
+    }
+
+    .wb-2 {
+
+        align-content: flex-end;
+        /* border: 1px solid red; */
+
+    }
 
 }
 
@@ -362,8 +352,7 @@ html {
         height: 40vh;
     
     }
-
-
+    
 }
 
 /* SERVICES CONTAINER --------------------- */
@@ -377,7 +366,7 @@ html {
     width: 100vw;
     height: 75vh;
     margin: 0 auto;
-    /* border: 1px solid red; */
+   
 
 }
 
@@ -456,7 +445,6 @@ html {
     padding-top: 3em;
     color: #000;
     text-decoration: none;
-    
 
 }
 
@@ -475,6 +463,65 @@ html {
 
 }
 
+/* SERVICES CONTAINER @MEDIA */
+
+@media (max-height: 500px){
+
+
+    .main {
+        
+        flex-wrap: wrap;
+        justify-content: flex-start;      
+        
+    }
+
+    .welcomeContainer {
+
+        height: 100vh;
+
+    }
+
+    .servicesBox h3 {
+    
+        display: none;        
+    
+    }    
+
+}
+
+@media (max-height: 500px){
+
+    .servicesContainer {
+
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+       
+    
+    }
+    
+    .servicesBox {
+    
+       display: flex;
+       flex-direction: column;
+       line-height: 1.5;
+       height: 80vh;
+       width: 30vw;
+           
+    }
+
+
+ 
+    
+
+
+}
+
 @media (max-width: 700px) {
 
     .servicesContainer {
@@ -485,8 +532,6 @@ html {
         align-items: center;
         width: 99vw;
         height: 200vh;
-        /* margin: 0 auto; */
-        /* border: 1px solid red; */
     
     }
 
@@ -518,7 +563,7 @@ html {
     .servicesBox img:hover {
 
         width: 110vw;
-    
+
     }
 
 }
