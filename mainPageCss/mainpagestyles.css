@@ -352,7 +352,7 @@ html {
         height: 40vh;
     
     }
-    
+
 }
 
 /* SERVICES CONTAINER --------------------- */
@@ -516,8 +516,19 @@ html {
     }
 
 
- 
+    .servicesBox img{
+
+        height: 45vh;
+        width: 40vw;
+
+
+    }
     
+    .servicesBox img:hover {
+
+        width: 45vw;
+    
+    }
 
 
 }
