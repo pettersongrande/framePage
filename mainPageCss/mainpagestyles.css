@@ -221,12 +221,12 @@ html {
 
     .sideNav {
 
-        display: flex;
+        display: none;
         width: 96vw;
         height: 85.5vh;
         padding-bottom: 250%;
         position: absolute;
-        top: 7.0rem;
+        top: 6.9rem;
         left: 0;
         background-color: rgba(255, 255, 255, 0.94);
         border-right: 13px solid rgba(55,66,66,0.21);
