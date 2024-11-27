@@ -95,7 +95,7 @@ html {
     height: 14vh;
     width: 100vw;
     background-color: #fff;
-    border-bottom: 1.5px solid rgba(192,192,192,0.98);
+    border-bottom: 1.5px solid #000;
     top: 0;
     position: sticky;
     z-index: 1;
@@ -221,12 +221,12 @@ html {
 
     .sideNav {
 
-        display: none;
-        width: 97vw;
+        display: flex;
+        width: 96vw;
         height: 85.5vh;
         padding-bottom: 250%;
         position: absolute;
-        top: 8.2rem;
+        top: 7.0rem;
         left: 0;
         background-color: rgba(255, 255, 255, 0.94);
         border-right: 13px solid rgba(55,66,66,0.21);
@@ -293,7 +293,7 @@ html {
 
         width: 18vw;
         margin: 0 auto;
-        padding-top: 2.5em ;
+        padding-top: 2em ;
         order: 2; 
     
     }
