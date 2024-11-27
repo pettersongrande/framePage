@@ -222,23 +222,23 @@ html {
     .sideNav {
 
         display: none;
-        width: 96vw;
-        height: 85.5vh;
-        padding-bottom: 250%;
+        height: 43vh;
         position: absolute;
-        top: 6.9rem;
+        top: 102%;
         left: 0;
         background-color: rgba(255, 255, 255, 0.94);
         border-right: 13px solid rgba(55,66,66,0.21);
         flex-direction: column;
         z-index: 1;
-        flex: 100%;        
+        
+        
 
     }
 
     #check:checked ~ .sideNav {
 
         display: flex;
+        width: 97vw;
 
     }
 
