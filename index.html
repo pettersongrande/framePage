@@ -3,124 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mainPageCss/mainpagestyles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
-    <title>Page Frame</title>
+    <title>The Library</title>
 </head>
 <body>
+    <div class="mainContainer">
+        <nav class="navbar">
 
-    <section class="main">
-
-        <nav class="navBar">
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <img src="mainPageImg/hamburguerMenu.png" class="menuIcon">
-            </label>
-
-            <div class="sideNav">
-                <a href="#" class="navOptions box-1 navLinks">Pricing</a>
-                <a href="#" class="navOptions box-2 navLinks">Services</a>
-                <a href="#" class="navOptions box-3 navLinks">Book</a>
-                <a href="#" class="navOptions box-4 navLinks">About</a>
+            <a class="navOptions navlink navbx-1" href="#">Pricing</a>
+            <a class="navOptions navlink navbx-2" href="#">Services</a>
+            <a class="navOptions navlink navbx-3" href="#">Book</a>
+            <a class="navOptions navlink navbx-4" href="#">About</a>
+            <div class="navOptions navImg">
+                <img alt="Logo image" src="mainPageImg/bookshelf.png">
+                <a href="#" class="navOptions navImg logoLink">THE LIBRARY</a>
             </div>
-
-            <div class="navOptions box-5"> <img src="mainPageImg/bookshelf.png" alt="pageLogo"></img></div>
-            <a href="#" class="navOptions box-6">THE LIBRARY</a>
 
         </nav>
-
-        <div class="welcomeContainer">
-
-            <div class="welcomeBox wb-1">
-                <img src="mainPageImg/library.jpg">
-            </div>
-
-            <div class="welcomeBox wb-2">
-
-                <h1>THE LIBRARY</h1>
-                <h2>Welcome to a new world of bookshelfs, sign up for a membership today!</h2>
-
-            </div>
-        
-            
+        <div class="billboard">
+            <img alt="library image" class="billboardImg" src="mainPageImg/library.jpg">
         </div>
+        <div class="welcomeCenter">
+            <h1>THE LIBRARY</h1>
+            <h2>Welcome to a new world of bookshelfs, sign up for a membership today!</h2>
+        </div>
+        <div class="cardsContainer">
+            <div class="cards cardbx-1">
+                    <div>
+                        <img src="mainPageImg/libraryinside.jpg">
+                    </div>
 
-        <div class="servicesContainer">
-
-            <div class="servicesBox sbx-1">
-
-                <div>
-                    <img src="mainPageImg/libraryinside.jpg">
-                </div>
-
-                <div>
-                    <h3>More than borrowing.</h3>
-                </div>
-
-                <div>
-                    <h4>Meeting rooms, café, bookclub and more! Our library has so much to offer. </h4>
-                </div>
-
-                <div>
-                    <a href="#">More Info &#x2192; </a>
-                </div>
-
-            </div>
-
-            <div class="servicesBox sbx-2">
                 
+                    <h3>More than borrowing.</h3>
+                
+
+                
+                    <h4>Meeting rooms, café, bookclub and more! Our library has so much to offer. </h4>
+                
+
+                
+                    <a href="#">More Info &#x2192; </a>
+                
+            </div>
+            <div class="cards cardbx-2">
                 <div>
                     <img src="mainPageImg/librarycard.png">
                 </div>
+            
+                    <h3>More than a library card</h3>
                 
-                <div>
-                    <h3>More than a library card.</h3>
-                </div>
-
-                <div>
                     <h4>Our membership card will get you access to museums, theaters, free learning apps, books discounts and much more. </h4>
-                </div>
-
-                <div>
                     <a href="#">More Info &#x2192; </a>
-                </div>
-
             </div>
-    
-            <div class="servicesBox sbx-3">
-                
+            <div class="cards cardBx-3">
                 <div>
                     <img src="mainPageImg/librarymember.jpg">
                 </div>
-
-                <div>
-                    <h3>More than a meeting.</h3>
-                </div>
-
-                <div>
-                    <h4>Get your projects done here.</h4>
-                </div>
-
+                <h3>More than a meeting.</h3>
+                <h4>Get your projects done here.</h4>
                 <div>
                     <a href="#">More Info &#x2192; </a>
                 </div>
 
             </div>
-
-            
-
         </div>
-
-    </section>
-
-    <!-- <footer>
-
-        <h3>Add Social and Contact</h3>
-
-    </footer> -->
-
-   
-
-
+        <footer class="footer">
+            <div class="signature">
+                <h1 class="logo">&Popf;</h1>
+                <h4>Code and Design by Petterson </h4>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

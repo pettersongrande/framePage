@@ -73,500 +73,172 @@ html {
 
 }
 
-/* MAIN CONTAINER  */
+/* START OF MAIN CONTAINER STYLES */
 
-.main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
-    background-color: #fff;
-    margin: 0 auto;
-    height: 100vh;
-    /* border: 1px solid green; */
+.mainContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 14vh 60vh 30vh 76vh 10vh;
+    grid-template-areas: 
+        "nav   nav   nav   nav   nav"
+        "bill  bill  bill  bill  bill"
+        "wc    wc    wc    wc    wc"
+        "cards cards cards cards cards"
+        "ftr   ftr   ftr   ftr   ftr";
 }
 
-/* NAV BAR CONTAINER STYLES */
+/*  START OF NAVBAR STYLES */
 
-.navBar {
-/* NAV BAR CONTAINER PROPERTIES */
-    display: flex;
-    justify-content: space-around;
-    height: 14vh;
-    width: 100vw;
+.navbar {
+    grid-area: nav;
     background-color: #fff;
     border-bottom: 1.5px solid #000;
+    font-family: 'Helvetica Neue',sans-serif;
+    display: flex;
+    flex-basis: 100%;
+    justify-content:space-evenly;
     top: 0;
     position: sticky;
     z-index: 1;
 
 }
 
-.checkbtn, #check{
-
-    display: none;
-
-}
-
 .navOptions {
-/* NAV BAR BOXES ITEM PROPERTIES*/
     font-size: 1em;
-    font-family: 'Helvetica Neue',sans-serif;
     color: #000;
-    padding: 0.5em;
     text-decoration: none;
     box-sizing: border-box;
+    height: 100%;
+    align-content: end;
     text-align: center;
-    height: 100%;    
 
 }
 
-/* There was no div prior to adding media queries. A .sideNav was created inside the mobile responsiveness to stylize its mobile navBar, however, this div caused major problems on larger screens. Styling the .sideNav here was necessary to control flexbox settings on navBar and navOptions */
-.sideNav {
-
-    flex: 1 1 auto;
-    display: flex;
-
+.navbar a {
+    flex: 60%;
+    line-height: 2;
 }
 
-.navBar .navLinks {
-
-    align-content: flex-end;
-    line-height: 1.5;
-    flex-grow: 1;
-
+.navbar img {
+    width: 5vw;
+    margin-top: 1.6em;
+    margin-right: 0.5em;
 }
 
-
-/* this sets the sizing of the boxes for logoImage and businessName navBar */
-
-.box-5, .box-6 {
-
-    flex: 0 0 auto;
-
-}
-
-.navLinks:hover, .box-6:hover {
+.navOptions:hover {
 
     color: black;
     font-weight: bolder;
     border-bottom: 2px solid orangered;
     padding-top: 2px;
     cursor: pointer;    
-
 }
 
-
-.box-1 {
-
-    order: 1;
+.logoLink:hover{
+    border-bottom: none;    
 }
-.box-2 {
 
+.navbx-1 {
+    order: 1;    
+}
+
+.navbx-2 {
     order: 2;
-    
 }
-.box-3 {
 
+.navbx-3 {
     order: 3;
-    
 }
-.box-4 {
 
+.navbx-4 {
     order: 4;
-    
 }
-.box-5 {
 
-    align-content: center;
+.navImg {
+    flex: 50%;
     order: 5;
-
-}
-
-.box-6 {
-
     font-size: 1.1em;
     font-weight: bold;
     align-content: flex-end;
     line-height: 3;
-    order: 6;
-    
 }
 
-.box-5 img {
+/* END OF NAV BAR STYLES */
+/*  BILLBOARD STYLES STARTS */
 
-    width: 5vw;
-    margin-top: 1.6em;
-    margin-right: 0.5em;
-
-}
-
-/* NAV BAR @MEDIA --------------------------------------*/
-
-/* MEDIA QUERIES */
-
-@media (max-width: 600px){
-
-    
-    /* nav links styles */
-
-    .navBar input{
-
-        display: none;
-    }
-
-    .checkbtn {
-        display: block;
-    }
-
-    .sideNav {
-
-        display: none;
-        height: 43vh;
-        position: absolute;
-        top: 102%;
-        left: 0;
-        background-color: rgba(255, 255, 255, 0.94);
-        border-right: 13px solid rgba(55,66,66,0.21);
-        flex-direction: column;
-        z-index: 1;
-        
-        
-
-    }
-
-    #check:checked ~ .sideNav {
-
-        display: flex;
-        width: 97vw;
-
-    }
-
-    .sideNav a {
-
-        font-size: 1.1em;
-        padding-top: 1.5em;
-        color: rgba(55,66,66,0.77);
-        cursor: pointer;        
-
-    }
-
-    .navBar div .box-1{
-
-        flex: 1%;
-
-    }
-
-    .navBar div .box-2{
-
-        flex: 1%;
-
-    }
-
-    .navBar div .box-3{
-
-        flex: 1%;
-
-    }
-
-    .navBar div .box-4{
-
-        flex: 80%;
-        padding-bottom: 100em;
-
-    }
-    
-
-    .menuIcon {
-        
-        padding-top: 3.5em;
-        padding-left: 1em;
-        align-self: center;
-        width: 12vw;
-        height: 5vh;
-        cursor: pointer;
-
-    }
-
-    /* nav logo and business name */
-    .box-5 img {
-
-        width: 18vw;
-        margin: 0 auto;
-        padding-top: 2em ;
-        order: 2; 
-    
-    }
-
-    .box-6 {
-
-        font-size: 1.5em;
-        text-wrap: wrap;
-        order: 1;
-
-    }
-
-    #navLinks:hover, .box-6:hover {
-
-        
-        font-weight: bolder;
-        border-bottom: 2px solid rgba(192,192,192,0.53);
-        cursor: pointer;    
-    
-    }
-
-}
-
-@media (max-height:500px){
-
-    .box-5 img {
-
-       display: none;
-
-    }
-
-}
-
-
-/* Welcome Container -------------------------------------*/ 
-
-.welcomeContainer {
-
+.billboard {
+    grid-area: bill;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 75vh;
-    width: 100vw;
-    /* border: 2px red solid; */
+    justify-content: center;
+    /* background-color: aqua; */
 
 }
 
-.welcomeBox {
-
-    
-    font-size: 1em;
-    font-family: 'Helvetica Neue',sans-serif;
-    color: #000;
-    padding: 0.5em;
-    width: 50%;
-    flex-grow: 1;
-    /* border: 1px solid orange; */
-
-}
-
-.wb-1 {
-
-    text-align: center;
-    order: 1;
-
-}
-
-.wb-2 {
-    
-    flex-grow: 5;
-    font-size: 1.1em;
-    text-align: center;
-    align-content: center;
-    line-height: 1.5;
-    order: 2;
-
-}
-
-.wb-1 img {
-
+.billboardImg {
+    padding-top: 2em;
     width: 50vw;
-    margin-top: 1em;
-    margin-right: 0.5em;
+    height: 50vh;
 
 }
 
-/* WELCOME CONTAINER @MEDIA --------------------------------*/
-
-/* MEDIA QUERIES */
-
-@media (max-width: 400px){
-
-    .welcomeContainer {
-
-        flex-wrap: nowrap;
-
-    }
-
-    .wb-1 img {
-
-        width: 50vw;
-        margin-top: 0.5em;
-        margin-right: 0.5em; 
-               
-    
-    }
-
-    .wb-2 {
-
-        align-content: flex-end;
-        
-
-    }
+/* BILLBOARD STYLES ENDS */
+/* WELCOME CENTER STYLES STARTS */
+.welcomeCenter {
+    grid-area: wc;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.2rem;
 
 }
 
-@media (max-width: 700px){
-
-    .welcomeBox  h1{
-
-        display: none;
-    }
-
-    .welcomeBox {
-
+.welcomeCenter h1 {
+    flex-grow: 2;  
     
-        
-        font-family: 'Helvetica Neue',sans-serif;
-        color: #000;
-        padding: 0.5em;
-        width: 80%;
-        flex-grow: 1;
-        /* border: 1px solid orange; */
-    
-    }
-    
-    .wb-1 {
-        
-        
-        text-align: center;
-        order: 1;
-        flex-grow: 1;
-    
-    }
-    
-    .wb-2 {
-        
-        font-size: 1.3em;
-        flex-grow: 10;
-        text-align: center;
-        align-content: center;
-        line-height: 1.5;
-        order: 2;
-    
-    }
-
-    .wb-1 img {
-
-        width: 80vw;
-        height: 40vh;
-    
-    }
-
 }
 
-@media (max-height: 450px){
-
-    .wb-2 h1{
-
-        padding-bottom: 1em;
-        border-bottom: 1px solid rgba(192,192,192,0.98);
-        
-
-    }
-
+.welcomeCenter h2 {
+    flex-grow: 8;
 }
 
-/* SERVICES CONTAINER --------------------- */
+/* WELCOME CENTER STYLES ENDS */
+/* SERVICES CARDS STYLES STARTS */
 
-.servicesContainer {
 
+.cardsContainer {
+    grid-area: cards;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+}
+
+.cards {
+    border: 1px solid slategrey;
+    color: #000;
+    background-color: rgba(192,192,192,0.53);
+    border: 3.5px solid silver;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    text-align: center;
     align-items: center;
-    width: 100vw;
-    height: 75vh;
     margin: 0 auto;
-   
+    height: 60vh;
+    width: 25vw;
+    overflow: hidden;
 
 }
 
-.servicesBox {
-
-   display: flex;
-   flex-direction: column;
-   line-height: 1.5;
-   height: 50vh;
-   width: 25vw;
-   margin: 0.5em;
-   padding: 0.1em .1em 2em;
-   text-align: center;
-   overflow: hidden;
-   font-family: 'Helvetica Neue',sans-serif;
-   background-color:rgba(192,192,192,0.53);
-   border: 1px solid silver;
-
-}
-
-.sbx-1 {
-
-    order: 1;
-
-}
-
-.sbx-2 {
-
-    order: 2;
-
-}
-
-.sbx-3 {
-    
-    order: 3;
-
-}
-
-
-.servicesBox div {
-
-    flex-grow: 1;
-    /* border: 1px solid black */
-
-}
-
-.servicesBox img {
-
-    height: 23vh;
+.cards img {
+    height: 35vh;
     width: 25vw;
     transition: width 1s;
 
 }
-
-.servicesBox h3 {
-    
-    text-align: left;
-    padding-left: 0.5em;
-    font-size: 1.5rem;
-    line-height: 4;
-    
-
-}
-
-.servicesBox h4 {
-
-    font-size: 1rem;
-    line-height: 1;
-    text-align: left;
-    padding-left: 0.5em;
-
-}
-
-.servicesBox a {
-
-    padding-top: 3em;
-    color: #000;
-    text-decoration: none;
-
-}
-
-.servicesBox a:hover {
-
+.cardsContainer a:hover {
     color: black;
     font-weight: bolder;
     text-decoration-line: underline;
@@ -574,124 +246,216 @@ html {
 
 }
 
-.servicesBox img:hover {
-
-    width: 26vw;
-
-}
-
-/* SERVICES CONTAINER @MEDIA */
-
-@media (max-height: 500px){
-
-
-    .main {
-        
-        flex-wrap: wrap;
-        justify-content: flex-start;      
-        
-    }
-
-    .welcomeContainer {
-
-        height: 100vh;
-
-    }
-
-    .servicesBox h3 {
-    
-        display: none;        
-    
-    }    
+.cards img:hover {
+    width: 26vw;   
 
 }
 
-@media (max-height: 500px){
+.cards h3{
+    display: block;
+    height: 5vh;
+    width: 25vw;
+    align-content: center;
+    padding-left: 0.5em;
+    text-align: left;
+    font-size: 1.5em;
 
-    .servicesContainer {
+}
+.cards h4{
+    display: block;
+    height: 15vh;
+    width: 25vw;
+    padding: 0.2em;
+    align-content: center;
 
-        display: flex;
-        flex-wrap: wrap;
-        /* flex-direction: column; */
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100vw;
-        height: 100vh;
-        margin: 0 auto;
-       
-    
-    }
-    
-    .servicesBox {
-    
-       display: flex;
-       flex-direction: column;
-       line-height: 1.5;
-       height: 80vh;
-       width: 30vw;
-           
-    }
-
-
-    .servicesBox img{
-
-        height: 45vh;
-        width: 40vw;
-
-
-    }
-    
-    .servicesBox img:hover {
-
-        width: 45vw;
-    
-    }
-
+}
+.cards a{
+    display: block;
+    height: 4vh;
+    width: 25vw;
+    text-decoration: none;
+    align-content: center;
+    color: #000;
 
 }
 
-@media (max-width: 700px) {
+.cardbx-1 {
+    order: 1;
+}
 
-    .servicesContainer {
+.cardbx-2 {
+    order: 2;
+}
 
-        display: flex;
+.cardbx-3 {
+    order: 3;
+}
+
+/* SERVICES CARDS STYLES ENDS */
+
+.footer {
+    grid-area: ftr;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: brown;
+    
+}
+
+.signature {
+    color: rgba(192,192,192,0.90);
+    /* background-color: aqua; */
+    text-align: center;
+    text-wrap: wrap;
+    align-content: center;
+    font-size: 0.7em;
+    height: 10vh;
+    width: 30vw;
+}
+
+.logo {
+    font-size: 3em;
+}
+
+/* RESPONSIVENES FOR SMALL SCREENS PORTRAIT MODE */
+
+@media (max-width: 500px ){
+    .mainContainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 11vh 60vh 30vh repeat(3, 60vh) 10vh;
+        grid-gap: 5em;
+        grid-template-areas:
+            "nav" 
+            "bill"
+            "wc"
+            "cards"
+            "cards"
+            "cards"
+            "ftr";
+    }
+
+    /* navbar */
+
+    .navlink {
+        display: none;
+    }
+
+    .navbar img {
+        width: 15vw;
+        margin-top: 0.5em;
+        margin-right: 1em;
+    }
+
+    .logoLink {
+        font-size: 1.5rem;
+
+    }
+
+    /* billboard */
+
+    .billboardImg {
+        padding-top: 0em;
+        width: 98vw;
+        border-radius: 1em;
+    }
+
+    /* cards */
+
+    .cardsContainer {
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 99vw;
-        height: 200vh;
+        
+    }
+    .cards {
+        width: 90vw;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cards img {
+        width: 95vw;
+    
+    }
+    .cards h3{
+        width: 90vw;
+    
+    }
+    .cards h4{
+        width: 90vw;
+    
+    }
+    .cards a{
+        width: 90vw;
+      
     
     }
 
-    .servicesBox {
+    .cards img:hover {
+        width: 98vw;   
+    
+    }
 
-        display: flex;
-        flex-direction: column;
-        line-height: 1.5;
+}
+
+/* RESPONSIVENES FOR SMALL SCREENS LANDSCAPE MODE */
+
+@media (min-width:501px ) and (max-width: 1170px){
+    .mainContainer {
+        grid-template-rows: 14vh 70vh 30vh 100vh 15vh;
+        
+    }
+
+
+
+    .billboardImg {
         height: 55vh;
-        width: 80vw;
-        margin: 0.5em;
-        padding: 0.1em .1em 2em;
-        text-align: center;
-        overflow: hidden;
-        font-family: 'Helvetica Neue',sans-serif;
-        background-color:rgba(192,192,192,0.53);
-        border: 1px solid silver;
-     
-     }
-
-     .servicesBox img {
-
-        height: 30vh;
-        width: 100vw;
-        transition: width 1s;
-    
+        width: 75vw;
+        
     }
-    
-    .servicesBox img:hover {
 
-        width: 110vw;
+
+    .welcomeCenter {
+        font-size: 1em;
+    }
+
+   
+    .navbar img {
+        margin-top: 0.5em;
+   
+    }
+
+    .logoLink {
+        display: none;
 
     }
 
-}
+
+    .cardsContainer {
+        height: 100vh;
+        width: 99vw;
+        
+    }
+    .cards {
+        height: 80vh;
+        width: 30vw;
+        
+    }
+    .cards img {
+        height: 50vh;
+        width: 35vw;
+    
+    }
+    .cards h3{
+        font-size: 1em;
+    
+    }
+    .cards h4{
+        font-size: 0.8em;
+    
+    }
+
+    .cards img:hover {
+        width: 38vw;   
+    
+    }
+
+
+} 
